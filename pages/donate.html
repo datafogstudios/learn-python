@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Support Learn Python - Help keep free Python education alive. Buy us a coffee or donate to DataFog Studios." />
+  <title>Support Us - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body class="bg-fog-gray">
+
+  <div id="header-mount"></div>
+
+  <main class="pt-24 pb-24">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Hero -->
+      <div class="text-center mb-16">
+        <span class="text-6xl block mb-6">💚</span>
+        <h1 class="font-jetbrains font-extrabold text-5xl text-deep-forest mb-4">
+          Support <span class="text-python-gold">Learn Python</span>
+        </h1>
+        <p class="font-atkinson text-storm-gray text-xl max-w-2xl mx-auto">
+          Learn Python is free and always will be. If it's helped you, please consider a small contribution to keep the lights on and new lessons coming.
+        </p>
+      </div>
+
+      <!-- Coffee Tiers -->
+      <div class="bg-paper-white rounded-3xl p-8 shadow-xl mb-8">
+        <h2 class="font-space font-bold text-2xl text-deep-forest mb-2 text-center">☕ Buy Us a Coffee</h2>
+        <p class="font-atkinson text-storm-gray text-center mb-8">No account needed. Quick and easy.</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" id="coffee-tiers">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Custom Amount -->
+        <div class="border-2 border-fog-gray rounded-xl p-4">
+          <label class="font-space font-medium text-deep-forest block mb-2">Custom Amount ($)</label>
+          <div class="flex gap-3">
+            <input type="number" id="custom-amount" min="1" placeholder="5"
+              class="flex-1 border-2 border-fog-gray rounded-lg px-4 py-2 font-atkinson text-deep-forest focus:border-python-gold focus:outline-none" />
+            <button onclick="handleDonate(document.getElementById('custom-amount').value)"
+              class="bg-python-gold text-deep-forest px-6 py-2 rounded-lg font-space font-bold hover:shadow-lg transition-all">
+              Donate →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Crypto -->
+      <div class="bg-paper-white rounded-3xl p-8 shadow-xl mb-8">
+        <h2 class="font-space font-bold text-2xl text-deep-forest mb-2 text-center">₿ Crypto Donations</h2>
+        <p class="font-atkinson text-storm-gray text-center mb-8">Send any amount to the wallets below.</p>
+
+        <div class="space-y-4" id="crypto-wallets">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- Thank You Note -->
+      <div class="text-center">
+        <p class="font-atkinson text-storm-gray text-lg">
+          Every contribution — big or small — directly funds new lessons, server costs, and keeping Learn Python free for everyone. 🙏
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    import { SITE_CONFIG } from '/src/data/site-config.js';
+
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+
+    // Coffee Tiers
+    const tiers = SITE_CONFIG.donations.coffee.amounts;
+    document.getElementById('coffee-tiers').innerHTML = tiers.map(t => \
+      <button onclick="handleDonate(\)"
+        class="border-2 border-fog-gray rounded-2xl p-5 text-center hover:border-python-gold hover:shadow-lg transition-all group">
+        <p class="text-3xl mb-2">☕\</p>
+        <p class="font-space font-bold text-deep-forest group-hover:text-python-gold">\$\</p>
+        <p class="font-atkinson text-storm-gray text-xs mt-1">\</p>
+      </button>
+    \).join('');
+
+    // Crypto Wallets
+    const wallets = [
+      { name: 'Bitcoin (BTC)', address: SITE_CONFIG.donations.crypto.wallets.bitcoin, icon: '₿', color: '#F7931A' },
+      { name: 'Ethereum (ETH)', address: SITE_CONFIG.donations.crypto.wallets.ethereum, icon: 'Ξ', color: '#627EEA' },
+      { name: 'Solana (SOL)', address: SITE_CONFIG.donations.crypto.wallets.solana, icon: '◎', color: '#9945FF' },
+      { name: 'USDC', address: SITE_CONFIG.donations.crypto.wallets.usdc, icon: '\$', color: '#2775CA' },
+    ];
+
+    document.getElementById('crypto-wallets').innerHTML = wallets.map(w => \
+      <div class="flex items-center gap-4 bg-fog-gray rounded-xl p-4">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white flex-shrink-0" style="background-color:\">
+          \
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-space font-medium text-deep-forest text-sm">\</p>
+          <p class="font-jetbrains text-storm-gray text-xs truncate">\</p>
+        </div>
+        <button onclick="navigator.clipboard.writeText('\').then(() => this.textContent = '✓ Copied!')"
+          class="flex-shrink-0 bg-paper-white border border-fog-gray rounded-lg px-3 py-1 font-space text-xs text-deep-forest hover:border-python-gold transition-all">
+          Copy
+        </button>
+      </div>
+    \).join('');
+
+    window.handleDonate = function(amount) {
+      // Stripe checkout would go here
+      alert(\Thank you for supporting with \$\! Stripe integration coming soon.\);
+    };
+  </script>
+</body>
+</html>

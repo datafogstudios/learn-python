@@ -1,0 +1,5 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#1A3A2E"/>
+  <circle cx="50" cy="50" r="30" fill="#FFB627"/>
+  <text x="50" y="65" font-size="40" text-anchor="middle" fill="#1A3A2E">🐍</text>
+</svg>

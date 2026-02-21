@@ -1,0 +1,21 @@
+﻿{
+  "rewrites": [
+    { "source": "/donate", "destination": "/pages/donate.html" },
+    { "source": "/legal/privacy", "destination": "/pages/legal/privacy.html" },
+    { "source": "/legal/terms", "destination": "/pages/legal/terms.html" },
+    { "source": "/legal/cookies", "destination": "/pages/legal/cookies.html" },
+    { "source": "/legal/gdpr", "destination": "/pages/legal/gdpr.html" },
+    { "source": "/legal/ccpa", "destination": "/pages/legal/ccpa.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

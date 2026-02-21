@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body class="bg-fog-gray">
+  <div id="header-mount"></div>
+  <main class="pt-24 pb-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-paper-white rounded-3xl p-10 shadow-xl">
+        <p class="font-atkinson text-storm-gray text-sm mb-2">Last updated: January 1, 2026</p>
+        <h1 class="font-jetbrains font-bold text-4xl text-deep-forest mb-2">Cookie Policy</h1>
+        <p class="font-atkinson text-storm-gray mb-10">Learn Python™ — A DataFog Studios Product</p>
+        <div class="space-y-8 font-atkinson text-midnight-slate leading-relaxed">
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">What Are Cookies?</h2>
+            <p>Cookies are small text files placed on your device when you visit a website. They help us remember your preferences and understand how you use Learn Python.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">Types of Cookies We Use</h2>
+            <div class="space-y-4">
+              <div class="bg-fog-gray rounded-xl p-4">
+                <h3 class="font-space font-bold text-deep-forest mb-1">Essential Cookies</h3>
+                <p class="text-sm">Required for the site to function. Cannot be disabled. These remember your login session and security preferences.</p>
+              </div>
+              <div class="bg-fog-gray rounded-xl p-4">
+                <h3 class="font-space font-bold text-deep-forest mb-1">Analytics Cookies (Optional)</h3>
+                <p class="text-sm">Help us understand which lessons are popular and how students navigate the curriculum. We use anonymous data only.</p>
+              </div>
+              <div class="bg-fog-gray rounded-xl p-4">
+                <h3 class="font-space font-bold text-deep-forest mb-1">Preference Cookies (Optional)</h3>
+                <p class="text-sm">Remember your theme, font size, and lesson progress.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">Managing Cookies</h2>
+            <p>You can disable non-essential cookies through your browser settings or our cookie consent banner. Disabling analytics cookies will not affect your learning experience.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">Contact</h2>
+            <p>Email: <a href="mailto:privacy@learnpython.com" class="text-python-gold hover:underline">privacy@learnpython.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+  </script>
+</body>
+</html>

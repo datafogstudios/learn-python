@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body class="bg-fog-gray">
+  <div id="header-mount"></div>
+  <main class="pt-24 pb-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-paper-white rounded-3xl p-10 shadow-xl">
+        <p class="font-atkinson text-storm-gray text-sm mb-2">Last updated: January 1, 2026</p>
+        <h1 class="font-jetbrains font-bold text-4xl text-deep-forest mb-2">Terms of Service</h1>
+        <p class="font-atkinson text-storm-gray mb-10">Learn Python™ — A DataFog Studios Product</p>
+
+        <div class="space-y-8 font-atkinson text-midnight-slate leading-relaxed">
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">1. Acceptance of Terms</h2>
+            <p>By accessing or using learnpython.com, you agree to be bound by these Terms of Service and all applicable laws. If you do not agree, do not use the site.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">2. Intellectual Property</h2>
+            <p>All content on this site — including lessons, code examples, graphics, and the "Learn Python" name and brand — is the exclusive property of DataFog Studios and is protected under U.S. trademark and copyright law. Learn Python™ is a registered trademark. Unauthorized reproduction or use is prohibited.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">3. Use License</h2>
+            <p>You are granted a limited, non-exclusive, non-transferable license to access and use this site for personal, educational, non-commercial purposes. You may not: modify, copy, or distribute site content commercially; use the content to train AI models; or misrepresent content as your own.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">4. User Conduct</h2>
+            <p>You agree not to use this site to: violate any applicable laws, transmit harmful or offensive content, attempt to gain unauthorized access to systems, or interfere with other users' access.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">5. Disclaimer</h2>
+            <p>Content is provided "as is" for educational purposes. DataFog Studios makes no warranty that the site will be error-free or uninterrupted. We are not responsible for any errors or omissions in the educational content.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">6. Limitation of Liability</h2>
+            <p>DataFog Studios shall not be liable for any indirect, incidental, or consequential damages arising from your use of this site.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">7. Governing Law</h2>
+            <p>These terms are governed by the laws of the State of California, United States.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">8. Contact</h2>
+            <p>Questions? Email: <a href="mailto:legal@learnpython.com" class="text-python-gold hover:underline">legal@learnpython.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+  </script>
+</body>
+</html>

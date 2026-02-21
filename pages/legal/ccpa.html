@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCPA Policy - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body class="bg-fog-gray">
+  <div id="header-mount"></div>
+  <main class="pt-24 pb-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-paper-white rounded-3xl p-10 shadow-xl">
+        <p class="font-atkinson text-storm-gray text-sm mb-2">Last updated: January 1, 2026</p>
+        <h1 class="font-jetbrains font-bold text-4xl text-deep-forest mb-2">CCPA Notice</h1>
+        <p class="font-atkinson text-storm-gray mb-10">For California Residents — California Consumer Privacy Act</p>
+        <div class="space-y-8 font-atkinson text-midnight-slate leading-relaxed">
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">Your California Rights</h2>
+            <p>California residents have the following rights under the CCPA:</p>
+            <div class="space-y-3 mt-4">
+              <div class="flex gap-3"><span class="text-python-gold font-bold">→</span><div><strong>Right to Know:</strong> What personal information we collect, use, disclose, and sell.</div></div>
+              <div class="flex gap-3"><span class="text-python-gold font-bold">→</span><div><strong>Right to Delete:</strong> Request deletion of your personal information (with certain exceptions).</div></div>
+              <div class="flex gap-3"><span class="text-python-gold font-bold">→</span><div><strong>Right to Opt-Out:</strong> Opt out of the sale of your personal information. We do not sell personal information.</div></div>
+              <div class="flex gap-3"><span class="text-python-gold font-bold">→</span><div><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</div></div>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">Do Not Sell My Personal Information</h2>
+            <p>We do not sell personal information to third parties. If this changes, we will provide a clear "Do Not Sell" opt-out mechanism and update this notice.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">How to Submit a Request</h2>
+            <p>Email: <a href="mailto:privacy@learnpython.com" class="text-python-gold hover:underline">privacy@learnpython.com</a><br/>
+            We will respond to verifiable consumer requests within 45 days.</p>
+          </div>
+          <div>
+            <h2 class="font-space font-bold text-xl text-deep-forest mb-3">Authorized Agent</h2>
+            <p>You may designate an authorized agent to make a request on your behalf. The agent must provide written authorization and you must verify your identity directly with us.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+  </script>
+</body>
+</html>
