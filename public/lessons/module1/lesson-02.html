@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 2: Variables & Data Types - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  <div id="header-mount"></div>
+  <div id="lesson-mount"></div>
+  <div id="footer-mount"></div>
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    import { createLessonLayout, injectLessonStyles } from '/src/js/components/lesson-layout.js';
+
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+    injectLessonStyles();
+
+    const content = +""+
+      <h2>What is a Variable?</h2>
+      <p>A variable is a named container that holds a value. Think of it like a labelled box — you give it a name, put something inside, and can refer to that name later in your code.</p>
+
+      <pre><code><span class="cm"># Assign a value to a variable</span>
+<span class="nm">name</span> = <span class="st">"Alice"</span>
+<span class="nm">age</span> = <span class="nm">25</span>
+<span class="nm">height</span> = <span class="nm">5.7</span>
+
+<span class="fn">print</span>(<span class="nm">name</span>)
+<span class="fn">print</span>(<span class="nm">age</span>)</code></pre>
+
+      <div class="output-block">Alice<br/>25</div>
+
+      <p>In Python, you don't need to declare a variable type upfront. Python figures it out automatically — this is called <strong>dynamic typing</strong>.</p>
+
+      <h2>The Four Core Data Types</h2>
+
+      <h3>1. String (str)</h3>
+      <p>Text data, always wrapped in quotes (single or double).</p>
+      <pre><code><span class="nm">greeting</span> = <span class="st">"Hello, Python!"</span>
+<span class="nm">language</span> = <span class="st">'Python'</span>
+<span class="fn">print</span>(<span class="fn">type</span>(<span class="nm">greeting</span>))  <span class="cm"># &lt;class 'str'&gt;</span></code></pre>
+
+      <h3>2. Integer (int)</h3>
+      <p>Whole numbers, positive or negative, no decimal point.</p>
+      <pre><code><span class="nm">score</span> = <span class="nm">100</span>
+<span class="nm">temperature</span> = <span class="op">-</span><span class="nm">15</span>
+<span class="fn">print</span>(<span class="fn">type</span>(<span class="nm">score</span>))  <span class="cm"># &lt;class 'int'&gt;</span></code></pre>
+
+      <h3>3. Float (float)</h3>
+      <p>Numbers with a decimal point.</p>
+      <pre><code><span class="nm">price</span> = <span class="nm">19.99</span>
+<span class="nm">pi</span> = <span class="nm">3.14159</span>
+<span class="fn">print</span>(<span class="fn">type</span>(<span class="nm">price</span>))  <span class="cm"># &lt;class 'float'&gt;</span></code></pre>
+
+      <h3>4. Boolean (bool)</h3>
+      <p>Only two possible values: <code>True</code> or <code>False</code>. Note the capital letters — Python is case-sensitive.</p>
+      <pre><code><span class="nm">is_learning</span> = <span class="kw">True</span>
+<span class="nm">is_tired</span> = <span class="kw">False</span>
+<span class="fn">print</span>(<span class="fn">type</span>(<span class="nm">is_learning</span>))  <span class="cm"># &lt;class 'bool'&gt;</span></code></pre>
+
+      <h2>Naming Rules</h2>
+      <ul>
+        <li>Use letters, numbers, and underscores only</li>
+        <li>Cannot start with a number (<code>1name</code> is invalid)</li>
+        <li>Case-sensitive: <code>name</code> and <code>Name</code> are different variables</li>
+        <li>Use <code>snake_case</code> by convention: <code>my_variable_name</code></li>
+        <li>Avoid Python reserved words: <code>if</code>, <code>for</code>, <code>print</code>, etc.</li>
+      </ul>
+
+      <h2>Multiple Assignment</h2>
+      <p>Python lets you assign multiple variables in one line:</p>
+      <pre><code><span class="cm"># Assign same value to multiple variables</span>
+<span class="nm">x</span> = <span class="nm">y</span> = <span class="nm">z</span> = <span class="nm">0</span>
+
+<span class="cm"># Assign different values in one line</span>
+<span class="nm">a</span>, <span class="nm">b</span>, <span class="nm">c</span> = <span class="nm">1</span>, <span class="nm">2</span>, <span class="nm">3</span>
+<span class="fn">print</span>(<span class="nm">a</span>, <span class="nm">b</span>, <span class="nm">c</span>)  <span class="cm"># 1 2 3</span></code></pre>
+
+      <div class="output-block">1 2 3</div>
+
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Use <code>type(variable)</code> anytime you want to check what data type a variable holds. This is incredibly useful for debugging.
+      </div>
+
+      <h2>What's Next?</h2>
+      <p>Now that you know how to store data, Lesson 3 covers <strong>operators</strong> — how to do math, compare values, and combine logic in Python.</p>
+    +""+;
+
+    const lessonNav = [
+      'Introduction to Python',
+      'Variables & Data Types',
+      'Operators & Expressions',
+      'String Basics',
+      'Input & Output',
+      'Type Conversion',
+      'Comments & Code Style',
+      'Your First Program',
+    ];
+
+    document.getElementById('lesson-mount').innerHTML = createLessonLayout({
+      moduleId: 1,
+      lessonIndex: 2,
+      title: 'Variables & Data Types',
+      content,
+    });
+
+    document.getElementById('lesson-nav').innerHTML = lessonNav.map((t, i) => +""+
+      <a href="./lesson-+""+${String(i+1).padStart(2,'0')}.html"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-atkinson transition-colors +""+${i === 1 ? 'bg-python-gold/10 text-python-gold font-bold' : 'text-storm-gray hover:text-deep-forest hover:bg-fog-gray'}">
+        <span class="font-jetbrains text-xs w-5">+""+${String(i+1).padStart(2,'0')}</span>
+        +""+${t}
+      </a>
+    +""+).join('');
+  </script>
+</body>
+</html>

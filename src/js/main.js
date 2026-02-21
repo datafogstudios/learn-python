@@ -1,6 +1,7 @@
 ﻿import { createHeader, initHeader } from './components/header.js';
 import { createFooter } from './components/footer.js';
 import { MODULES } from '../data/modules.js';
+import { initCookieBanner } from './components/cookie-banner.js';
 
 // ─── Mount Header & Footer ───────────────────────────────────────
 const headerMount = document.getElementById('header-mount');
@@ -108,3 +109,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 console.log('%c🐍 Learn Python', 'color: #FFB627; font-size: 24px; font-weight: bold;');
 console.log('%cBuilt by DataFog Studios', 'color: #4ECDC4; font-size: 12px;');
+
+// ─── Cookie Banner ───────────────────────────────────────────────
+initCookieBanner();

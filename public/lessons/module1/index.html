@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Python Basics - Module 1. Learn variables, data types, and your first Python programs." />
+  <title>Module 1: Python Basics - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body class="bg-fog-gray">
+  <div id="header-mount"></div>
+
+  <main class="pt-24 pb-24">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Module Hero -->
+      <div class="bg-gradient-to-br from-deep-forest to-midnight-slate rounded-3xl p-10 mb-8 text-paper-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 text-9xl opacity-10 select-none">🎯</div>
+        <div class="relative z-10">
+          <span class="bg-syntax-green/20 text-syntax-green font-jetbrains text-xs px-3 py-1 rounded-full">Module 1</span>
+          <h1 class="font-jetbrains font-extrabold text-4xl mt-4 mb-3">Python Basics</h1>
+          <p class="font-atkinson text-fog-gray text-lg max-w-xl">
+            Start your Python journey. Learn variables, data types, operators, and how to write your first real programs.
+          </p>
+          <div class="flex gap-6 mt-6 flex-wrap">
+            <div><p class="font-jetbrains font-bold text-2xl text-python-gold">8</p><p class="font-atkinson text-storm-gray text-sm">Lessons</p></div>
+            <div><p class="font-jetbrains font-bold text-2xl text-python-gold">~2h</p><p class="font-atkinson text-storm-gray text-sm">Duration</p></div>
+            <div><p class="font-jetbrains font-bold text-2xl text-python-gold">Free</p><p class="font-atkinson text-storm-gray text-sm">Always</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lesson List -->
+      <div class="bg-paper-white rounded-2xl border border-fog-gray overflow-hidden mb-8">
+        <div class="px-8 py-5 border-b border-fog-gray">
+          <h2 class="font-space font-bold text-xl text-deep-forest">Lessons in this module</h2>
+        </div>
+        <div class="divide-y divide-fog-gray" id="lesson-list">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <a href="./lesson-01.html"
+        class="block bg-python-gold text-deep-forest text-center px-8 py-4 rounded-xl font-space font-bold text-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+        Start Module 1 →
+      </a>
+
+    </div>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+
+    const lessons = [
+      { n: '01', title: 'Introduction to Python', desc: 'What Python is, why it matters, and how to set up your environment.' },
+      { n: '02', title: 'Variables & Data Types', desc: 'Store information with variables. Learn strings, integers, floats, and booleans.' },
+      { n: '03', title: 'Operators & Expressions', desc: 'Arithmetic, comparison, and logical operators. How Python evaluates expressions.' },
+      { n: '04', title: 'String Basics', desc: 'Working with text. String methods, formatting, and f-strings.' },
+      { n: '05', title: 'Input & Output', desc: 'Read user input with input() and display results with print().' },
+      { n: '06', title: 'Type Conversion', desc: 'Convert between data types. int(), str(), float(), and type().' },
+      { n: '07', title: 'Comments & Code Style', desc: 'Writing clean, readable Python. Comments, PEP8, and naming conventions.' },
+      { n: '08', title: 'Your First Program', desc: 'Put it all together. Build a complete interactive Python program from scratch.' },
+    ];
+
+    document.getElementById('lesson-list').innerHTML = lessons.map((l, i) => +""+
+      <a href="./lesson-+""+${l.n}.html"
+        class="flex items-center gap-5 px-8 py-5 hover:bg-fog-gray transition-colors group">
+        <div class="w-10 h-10 rounded-full bg-fog-gray flex items-center justify-center font-jetbrains font-bold text-sm text-deep-forest flex-shrink-0 group-hover:bg-python-gold group-hover:text-deep-forest transition-colors">
+          +""+${l.n}
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-space font-medium text-deep-forest group-hover:text-python-gold transition-colors">+""+${l.title}</p>
+          <p class="font-atkinson text-storm-gray text-sm">+""+${l.desc}</p>
+        </div>
+        <span class="text-storm-gray group-hover:text-python-gold group-hover:translate-x-1 transition-all">→</span>
+      </a>
+    +""+).join('');
+  </script>
+</body>
+</html>

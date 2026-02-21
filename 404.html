@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body class="bg-gradient-to-br from-deep-forest to-ink-black min-h-screen flex flex-col">
+  <div id="header-mount"></div>
+
+  <main class="flex-1 flex items-center justify-center px-6 py-24">
+    <div class="text-center max-w-xl">
+
+      <!-- Animated Snake -->
+      <div class="font-jetbrains text-8xl font-extrabold text-paper-white mb-2 leading-none">
+        4<span class="text-python-gold animate-bounce inline-block">🐍</span>4
+      </div>
+
+      <h1 class="font-jetbrains font-bold text-3xl text-paper-white mb-4 mt-4">
+        Page Not Found
+      </h1>
+
+      <div class="bg-midnight-slate/60 rounded-2xl p-6 mb-8 text-left border border-fog-gray/10">
+        <pre class="font-jetbrains text-sm leading-relaxed"><code><span class="cm"># Python equivalent of this moment:</span>
+
+<span class="kw">try</span>:
+    page = <span class="fn">find_page</span>(url)
+<span class="kw">except</span> PageNotFoundError:
+    <span class="fn">print</span>(<span class="st">"Oops! This page doesn't exist."</span>)
+    <span class="cm"># Let's get you back on track 🐍</span></code></pre>
+      </div>
+
+      <p class="font-atkinson text-fog-gray text-lg mb-10">
+        The page you're looking for has moved, been deleted, or never existed. Let's get you back to learning Python.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/"
+          class="bg-python-gold text-deep-forest px-8 py-4 rounded-xl font-space font-bold text-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+          ← Back to Home
+        </a>
+        <a href="/public/lessons/module1/index.html"
+          class="bg-transparent border-2 border-syntax-green/50 text-syntax-green px-8 py-4 rounded-xl font-space font-bold text-lg hover:bg-syntax-green/10 transition-all">
+          Start Learning →
+        </a>
+      </div>
+
+      <!-- Quick Nav -->
+      <div class="mt-12 flex flex-wrap gap-3 justify-center">
+        <a href="/#course" class="font-atkinson text-storm-gray text-sm hover:text-python-gold transition-colors">Course</a>
+        <span class="text-midnight-slate">·</span>
+        <a href="/#features" class="font-atkinson text-storm-gray text-sm hover:text-python-gold transition-colors">Features</a>
+        <span class="text-midnight-slate">·</span>
+        <a href="/pages/donate.html" class="font-atkinson text-storm-gray text-sm hover:text-python-gold transition-colors">Support Us</a>
+        <span class="text-midnight-slate">·</span>
+        <a href="/pages/legal/privacy.html" class="font-atkinson text-storm-gray text-sm hover:text-python-gold transition-colors">Privacy</a>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+  </script>
+</body>
+</html>

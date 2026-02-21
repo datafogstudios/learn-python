@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://learnpython.com/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://learnpython.com/pages/donate.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Module Indexes -->
+  <url>
+    <loc>https://learnpython.com/public/lessons/module1/index.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://learnpython.com/public/lessons/module2/index.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://learnpython.com/public/lessons/module3/index.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Module 1 Lessons -->
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-01.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-02.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-03.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-04.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-05.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-06.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-07.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://learnpython.com/public/lessons/module1/lesson-08.html</loc><lastmod>2026-02-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Legal Pages -->
+  <url><loc>https://learnpython.com/pages/legal/privacy.html</loc><lastmod>2026-02-21</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://learnpython.com/pages/legal/terms.html</loc><lastmod>2026-02-21</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://learnpython.com/pages/legal/cookies.html</loc><lastmod>2026-02-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://learnpython.com/pages/legal/gdpr.html</loc><lastmod>2026-02-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://learnpython.com/pages/legal/ccpa.html</loc><lastmod>2026-02-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+</urlset>

@@ -1,0 +1,13 @@
+﻿# robots.txt - Learn Python (learnpython.com)
+# Built by DataFog Studios
+
+User-agent: *
+Allow: /
+
+# Block build artifacts
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /.vercel/
+
+# Sitemap location
+Sitemap: https://learnpython.com/sitemap.xml

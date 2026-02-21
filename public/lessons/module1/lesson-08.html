@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 08: Your First Program - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body class="bg-fog-gray">
+  <div id="header-mount"></div>
+  <main class="pt-24 pb-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-paper-white rounded-2xl border border-fog-gray p-12 text-center">
+        <span class="text-6xl block mb-6">🚧</span>
+        <span class="bg-python-gold/10 text-python-gold font-jetbrains text-xs px-3 py-1 rounded-full">Lesson 08</span>
+        <h1 class="font-jetbrains font-extrabold text-3xl text-deep-forest mt-4 mb-4">Your First Program</h1>
+        <p class="font-atkinson text-storm-gray text-lg mb-8">Coming soon! Build a complete interactive Python program.</p>
+        <p class="font-atkinson text-storm-gray text-sm mb-10">This lesson is being written. Check back soon — new content drops weekly!</p>
+        <div class="flex gap-4 justify-center">
+          <a href='./lesson-07.html' class='bg-paper-white border-2 border-fog-gray rounded-xl px-6 py-3 font-space font-bold text-deep-forest hover:border-python-gold transition-all'>← Lesson 7</a>
+          <a href='../module2/index.html' class='bg-gradient-to-r from-syntax-green to-variable-blue rounded-xl px-6 py-3 font-space font-bold text-paper-white hover:shadow-lg transition-all'>Module 2 →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-mount"></div>
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+  </script>
+</body>
+</html>

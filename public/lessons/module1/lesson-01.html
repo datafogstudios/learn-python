@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 1: Introduction to Python - Learn Python</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  <div id="header-mount"></div>
+  <div id="lesson-mount"></div>
+  <div id="footer-mount"></div>
+  <script type="module">
+    import { createHeader, initHeader } from '/src/js/components/header.js';
+    import { createFooter } from '/src/js/components/footer.js';
+    import { createLessonLayout, injectLessonStyles } from '/src/js/components/lesson-layout.js';
+
+    document.getElementById('header-mount').innerHTML = createHeader();
+    document.getElementById('footer-mount').innerHTML = createFooter();
+    initHeader();
+    injectLessonStyles();
+
+    const content = +""+
+      <h2>What is Python?</h2>
+      <p>Python is a high-level, general-purpose programming language created by Guido van Rossum and first released in 1991. It's designed to be readable, simple, and powerful — making it one of the best first languages to learn.</p>
+      <p>Python runs on Windows, macOS, and Linux. It's used everywhere: web development, data science, machine learning, automation, game development, and more.</p>
+
+      <h2>Why Learn Python?</h2>
+      <ul>
+        <li>Clean, readable syntax that looks almost like plain English</li>
+        <li>Huge standard library — "batteries included"</li>
+        <li>Massive ecosystem of third-party packages (pip)</li>
+        <li>Top language for data science and AI</li>
+        <li>High demand in the job market</li>
+      </ul>
+
+      <h2>Your First Python Program</h2>
+      <p>The tradition in programming is to start with "Hello, World!" — a program that simply prints a message to the screen. In Python, that's just one line:</p>
+
+      <pre><code><span class="fn">print</span>(<span class="st">"Hello, World!"</span>)</code></pre>
+
+      <div class="output-block"># Output:<br/>Hello, World!</div>
+
+      <p>That's it. No boilerplate, no imports, no semicolons. Just one clean line. This simplicity is why Python is loved by beginners and experts alike.</p>
+
+      <h2>How Python Runs</h2>
+      <p>Python is an <strong>interpreted</strong> language. This means Python reads your code line by line and executes it immediately, rather than compiling it all first like C or Java. This makes it easy to experiment and test ideas quickly.</p>
+
+      <h3>The Python Interactive Shell</h3>
+      <p>You can run Python code interactively by opening a terminal and typing <code>python3</code>. The <code>>>></code> prompt means Python is ready for input:</p>
+
+      <pre><code><span class="cm">>>> </span><span class="fn">print</span>(<span class="st">"Hello!"</span>)
+Hello!
+<span class="cm">>>> </span><span class="nm">2</span> <span class="op">+</span> <span class="nm">2</span>
+4</code></pre>
+
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> You don't need to install anything right now. You can follow along using online environments like <a href="https://replit.com" target="_blank" class="text-variable-blue hover:underline">Replit</a> or <a href="https://python.org/shell" target="_blank" class="text-variable-blue hover:underline">python.org/shell</a>.
+      </div>
+
+      <h2>Python Versions</h2>
+      <p>Always use <strong>Python 3</strong> (the current version). Python 2 was retired in 2020 and is no longer supported. All lessons on this site use Python 3.</p>
+
+      <h2>What's Next?</h2>
+      <p>In Lesson 2, we'll learn about <strong>variables</strong> — the building blocks of every program. You'll learn how to store data and work with different types of information in Python.</p>
+    +""+;
+
+    const lessonNav = [
+      'Introduction to Python',
+      'Variables & Data Types',
+      'Operators & Expressions',
+      'String Basics',
+      'Input & Output',
+      'Type Conversion',
+      'Comments & Code Style',
+      'Your First Program',
+    ];
+
+    document.getElementById('lesson-mount').innerHTML = createLessonLayout({
+      moduleId: 1,
+      lessonIndex: 1,
+      title: 'Introduction to Python',
+      content,
+    });
+
+    document.getElementById('lesson-nav').innerHTML = lessonNav.map((t, i) => +""+
+      <a href="./lesson-+""+${String(i+1).padStart(2,'0')}.html"
+        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-atkinson transition-colors +""+${i === 0 ? 'bg-python-gold/10 text-python-gold font-bold' : 'text-storm-gray hover:text-deep-forest hover:bg-fog-gray'}">
+        <span class="font-jetbrains text-xs w-5">+""+${String(i+1).padStart(2,'0')}</span>
+        +""+${t}
+      </a>
+    +""+).join('');
+  </script>
+</body>
+</html>
